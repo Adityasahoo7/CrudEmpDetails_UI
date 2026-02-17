@@ -1,0 +1,38 @@
+src/app
+│
+├── core/
+│   ├── services/
+│   │     ├── employee.service.ts
+│   │     ├── ai-search.service.ts
+│   │
+│   ├── models/
+│   │     ├── employee.model.ts
+│   │     ├── ai-search-request.model.ts
+│   │     ├── ai-search-response.model.ts
+│
+├── features/
+│   ├── dashboard/
+│   │     ├── dashboard.component.ts
+│   │     ├── dashboard.component.html
+│   │     ├── dashboard.component.css
+│   │
+│   ├── employee/
+│   │     ├── add-employee/
+│   │     │     ├── add-employee.component.ts
+│   │     │     ├── add-employee.component.html
+│   │     │
+│   │     ├── edit-employee/
+│   │     │     ├── edit-employee.component.ts
+│   │     │     ├── edit-employee.component.html
+│   │     │
+│   │     ├── view-employee/
+│   │     │     ├── view-employee.component.ts
+│   │     │     ├── view-employee.component.html
+│
+├── shared/
+│   ├── components/
+│   │     ├── confirm-dialog.component.ts
+│   │     ├── confirm-dialog.component.html
+│
+├── app-routing.module.ts
+└── app.module.ts
