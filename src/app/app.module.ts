@@ -23,7 +23,8 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
     
   ],
   providers: [],
