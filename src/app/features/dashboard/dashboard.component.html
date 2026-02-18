@@ -1,1 +1,50 @@
-<p>dashboard works!</p>
+<div class="container mt-4">
+
+  <!-- Header -->
+  <div class="d-flex justify-content-between mb-3">
+    <input type="text"
+           class="form-control w-50"
+           placeholder="Search using AI..."
+           [(ngModel)]="searchText">
+
+    <button class="btn btn-primary ms-2"
+            (click)="searchEmployees()">Search</button>
+  </div>
+
+  <!-- Add Button -->
+  <button class="btn btn-success mb-3"
+          (click)="navigateToAdd()">➕ Add Employee</button>
+
+  <!-- Table -->
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.department }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning me-1"
+                  (click)="navigateToEdit(emp.id)">✏</button>
+
+          <button class="btn btn-sm btn-info me-1"
+                  (click)="navigateToView(emp.id)">👁</button>
+
+          <button class="btn btn-sm btn-danger"
+                  (click)="deleteEmployee(emp.id)">🗑</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,1 +1,9 @@
-<p>edit-employee works!</p>
+<div class="container mt-4" *ngIf="employee">
+  <h3>Edit Employee</h3>
+
+  <input class="form-control mb-2" [(ngModel)]="employee.name">
+  <input class="form-control mb-2" [(ngModel)]="employee.salary">
+  <input class="form-control mb-2" [(ngModel)]="employee.department">
+
+  <button class="btn btn-primary" (click)="update()">Update</button>
+</div>

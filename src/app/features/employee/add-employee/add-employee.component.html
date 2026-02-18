@@ -1,1 +1,9 @@
-<p>add-employee works!</p>
+<div class="container mt-4">
+  <h3>Add Employee</h3>
+
+  <input class="form-control mb-2" placeholder="Name" [(ngModel)]="employee.name">
+  <input class="form-control mb-2" placeholder="Salary" [(ngModel)]="employee.salary">
+  <input class="form-control mb-2" placeholder="Department" [(ngModel)]="employee.department">
+
+  <button class="btn btn-primary" (click)="save()">Save</button>
+</div>

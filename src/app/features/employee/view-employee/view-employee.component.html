@@ -1,1 +1,7 @@
-<p>view-employee works!</p>
+<div class="container mt-4" *ngIf="employee">
+  <h3>Employee Details</h3>
+
+  <p><strong>Name:</strong> {{ employee.name }}</p>
+  <p><strong>Salary:</strong> {{ employee.salary }}</p>
+  <p><strong>Department:</strong> {{ employee.department }}</p>
+</div>
