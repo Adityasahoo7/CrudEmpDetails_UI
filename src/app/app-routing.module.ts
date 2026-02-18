@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'edit-employee/:id', component: EditEmployeeComponent },
   { path: 'view-employee/:id', component: ViewEmployeeComponent }
 ];
-//Define  all routes acordingly
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
