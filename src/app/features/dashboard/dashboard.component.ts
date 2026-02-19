@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
       this.loadEmployees();
       return;
     }
-    console.log("Log is - "+this.searchText)
+    console.log("Message is - "+this.searchText)
     this.aiSearchService.search(this.searchText).subscribe(data => {
       this.employees = data;
     });

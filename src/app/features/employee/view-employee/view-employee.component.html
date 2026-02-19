@@ -1,7 +1,52 @@
-<div class="container mt-4" *ngIf="employee">
-  <h3>Employee Details</h3>
+<div class="employee-wrapper" *ngIf="employee">
 
-  <p><strong>Name:</strong> {{ employee.name }}</p>
-  <p><strong>Salary:</strong> {{ employee.salary }}</p>
-  <p><strong>Department:</strong> {{ employee.department }}</p>
+  <div class="employee-card">
+
+    <h2 class="view-title">👁️ Employee Details</h2>
+
+    <div class="details-grid">
+
+      <div class="detail-box">
+        <span class="label">Employee ID</span>
+        <span class="value">{{ employee.id }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Name</span>
+        <span class="value">{{ employee.name }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Salary</span>
+        <span class="value">₹ {{ employee.salary }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Phone</span>
+        <span class="value">{{ employee.phone }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Email</span>
+        <span class="value">{{ employee.email }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Age</span>
+        <span class="value">{{ employee.age }}</span>
+      </div>
+
+      <div class="detail-box">
+        <span class="label">Department</span>
+        <span class="value">{{ employee.department }}</span>
+      </div>
+
+    </div>
+
+    <div class="button-section">
+      <button class="back-btn" routerLink="/">⬅ Back</button>
+    </div>
+
+  </div>
+
 </div>

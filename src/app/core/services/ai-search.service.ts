@@ -13,8 +13,11 @@ private baseUrl='http://localhost:5169/api/ai-search';
 
 
   search(queryText: string): Observable<Employee[]> {
-    return this.http.post<Employee[]>(this.baseUrl, { queryText });
-  }
+  return this.http.post<Employee[]>(this.baseUrl, {
+    naturalLanguageQuery: queryText
+  });
+}
+
 
 
 

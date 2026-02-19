@@ -5,7 +5,8 @@ import { Employee } from '../../../core/models/employee.model';
 
 @Component({
   selector: 'app-edit-employee',
-  templateUrl: './edit-employee.component.html'
+  templateUrl: './edit-employee.component.html',
+  styleUrls: ['./edit-employee.component.css']
 })
 export class EditEmployeeComponent implements OnInit {
 

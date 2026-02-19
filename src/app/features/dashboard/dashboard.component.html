@@ -1,50 +1,67 @@
-<div class="container mt-4">
+<div class="employee-wrapper">
 
-  <!-- Header -->
-  <div class="d-flex justify-content-between mb-3">
-    <input type="text"
-           class="form-control w-50"
-           placeholder="Search using AI..."
-           [(ngModel)]="searchText">
+  <div class="employee-card">
 
-    <button class="btn btn-primary ms-2"
-            (click)="searchEmployees()">Search</button>
+    <!-- Header Section -->
+    <div class="header-section">
+      <h2>👨‍💼 Employee Management System</h2>
+
+      <div class="search-section">
+        <input type="text"
+               placeholder="Search using AI..."
+               [(ngModel)]="searchText">
+
+        <button (click)="searchEmployees()">Search</button>
+      </div>
+    </div>
+
+    <!-- Add Employee Button -->
+    <div class="add-btn">
+      <button (click)="navigateToAdd()">➕ Add Employee</button>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>₹ {{ emp.salary }}</td>
+            <td>{{ emp.phone }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.age }}</td>
+            <td>{{ emp.department }}</td>
+
+            <td class="action-btns">
+              <button class="edit"
+                      (click)="navigateToEdit(emp.id)">✏</button>
+
+              <button class="view"
+                      (click)="navigateToView(emp.id)">👁</button>
+
+              <button class="delete"
+                      (click)="deleteEmployee(emp.id)">🗑</button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
   </div>
-
-  <!-- Add Button -->
-  <button class="btn btn-success mb-3"
-          (click)="navigateToAdd()">➕ Add Employee</button>
-
-  <!-- Table -->
-  <table class="table table-bordered">
-    <thead class="table-dark">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Salary</th>
-        <th>Department</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let emp of employees">
-        <td>{{ emp.id }}</td>
-        <td>{{ emp.name }}</td>
-        <td>{{ emp.salary }}</td>
-        <td>{{ emp.department }}</td>
-        <td>
-          <button class="btn btn-sm btn-warning me-1"
-                  (click)="navigateToEdit(emp.id)">✏</button>
-
-          <button class="btn btn-sm btn-info me-1"
-                  (click)="navigateToView(emp.id)">👁</button>
-
-          <button class="btn btn-sm btn-danger"
-                  (click)="deleteEmployee(emp.id)">🗑</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 
 </div>

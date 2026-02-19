@@ -5,7 +5,8 @@ import { Employee } from '../../../core/models/employee.model';
 
 @Component({
   selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html'
+  templateUrl: './add-employee.component.html',
+  styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent {
 

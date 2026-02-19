@@ -1,0 +1,157 @@
+/* Full Page Background */
+.employee-wrapper {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Card Container */
+.employee-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-section h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  gap: 10px;
+}
+
+.search-section input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 260px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-section input:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+}
+
+.search-section button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e73df;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-section button:hover {
+  background-color: #2e59d9;
+}
+
+/* Add Button */
+.add-btn {
+  margin-bottom: 20px;
+}
+
+.add-btn button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1cc88a;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn button:hover {
+  background-color: #17a673;
+}
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #343a40;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fc;
+}
+
+tbody tr:hover {
+  background-color: #e2e6f5;
+  transform: scale(1.01);
+}
+
+/* Prevent Email Breaking Layout */
+td {
+  word-break: break-word;
+}
+
+/* Action Buttons */
+.action-btns button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.edit {
+  background-color: #f6c23e;
+}
+
+.view {
+  background-color: #36b9cc;
+  color: white;
+}
+
+.delete {
+  background-color: #e74a3b;
+  color: white;
+}
+
+.action-btns button:hover {
+  transform: scale(1.15);
+}
