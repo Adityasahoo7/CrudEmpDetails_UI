@@ -88,3 +88,32 @@
     grid-template-columns: 1fr;
   }
 }
+.button-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e73df;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #2e59d9;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
