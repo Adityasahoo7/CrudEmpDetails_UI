@@ -1,27 +1,35 @@
-<div class="employee-wrapper">
+<div class="dashboard-wrapper">
 
-  <div class="employee-card">
+  <div class="dashboard-card">
 
-    <!-- Header Section -->
-    <div class="header-section">
-      <h2>👨‍💼 Employee Management System</h2>
+    <!-- Top Header -->
+    <div class="top-bar">
+      <h2 class="title">👨‍💼 Employee Management System</h2>
+
+      <button class="logout-btn" (click)="logout()">
+        🔓 Logout
+      </button>
+    </div>
+
+    <!-- Search + Add Section -->
+    <div class="action-bar">
 
       <div class="search-section">
         <input type="text"
-               placeholder="Search using AI..."
+               placeholder="Search employees..."
                [(ngModel)]="searchText">
 
         <button (click)="searchEmployees()">Search</button>
       </div>
-    </div>
 
-    <!-- Add Employee Button -->
-    <div class="add-btn">
-      <button (click)="navigateToAdd()">➕ Add Employee</button>
+      <button class="add-btn" (click)="navigateToAdd()">
+        ➕ Add Employee
+      </button>
+
     </div>
 
     <!-- Table Section -->
-    <div class="table-responsive">
+    <div class="table-container">
       <table>
         <thead>
           <tr>
@@ -46,19 +54,13 @@
             <td>{{ emp.age }}</td>
             <td>{{ emp.department }}</td>
 
-            <td class="action-btns">
-              <button class="edit"
-                      (click)="navigateToEdit(emp.id)">✏</button>
-
-              <button class="view"
-                      (click)="navigateToView(emp.id)">👁</button>
-
-              <button class="delete"
-                      (click)="deleteEmployee(emp.id)">🗑</button>
+            <td class="action-buttons">
+              <button class="edit" (click)="navigateToEdit(emp.id)">✏</button>
+              <button class="view" (click)="navigateToView(emp.id)">👁</button>
+              <button class="delete" (click)="deleteEmployee(emp.id)">🗑</button>
             </td>
           </tr>
         </tbody>
-
       </table>
     </div>
 

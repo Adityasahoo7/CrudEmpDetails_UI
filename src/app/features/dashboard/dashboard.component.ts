@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Employee } from '../../core/models/employee.model';
 import { EmployeeService } from '../../core/services/employee.service';
 import { AiSearchService } from '../../core/services/ai-search.service';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,12 +18,19 @@ export class DashboardComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private aiSearchService: AiSearchService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService 
   ) { }
 
   ngOnInit(): void {
     this.loadEmployees();
   }
+
+logout() {
+  this.authService.logout();
+  this.router.navigate(['/login']);
+}
+
 
   loadEmployees() {
     this.employeeService.getAll().subscribe(data => {

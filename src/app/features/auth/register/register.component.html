@@ -1,0 +1,41 @@
+<div class="register-wrapper">
+
+  <div class="register-card">
+
+    <h2 class="register-title">📝 Create Account</h2>
+    <p class="register-subtitle">Register to get started</p>
+
+    <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+
+      <div class="form-group">
+        <label>UserName</label>
+        <input type="email"
+               [(ngModel)]="registerData.username"
+               name="username"
+               required
+               placeholder="Enter your username">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password"
+               [(ngModel)]="registerData.password"
+               name="password"
+               required
+               placeholder="Create a password">
+      </div>
+
+      <button type="submit" class="register-btn">
+        🚀 Register
+      </button>
+
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a routerLink="/login">Login</a>
+    </p>
+
+  </div>
+
+</div>

@@ -8,8 +8,11 @@ import { AddEmployeeComponent } from './features/employee/add-employee/add-emplo
 import { EditEmployeeComponent } from './features/employee/edit-employee/edit-employee.component';
 import { ViewEmployeeComponent } from './features/employee/view-employee/view-employee.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { LoginComponent } from './features/auth/login/login.component';
+import { RegisterComponent } from './features/auth/register/register.component';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { CoreModule } from './core/core.module';
     DashboardComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,10 @@ import { CoreModule } from './core/core.module';
     CoreModule
     
   ],
-  providers: [],
+
+  providers: [
+  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
