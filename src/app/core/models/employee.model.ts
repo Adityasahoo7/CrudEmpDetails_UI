@@ -6,4 +6,5 @@ export interface Employee {
   email: string;
   age: number;
   department: string;
+  joiningDate: Date;
 }
