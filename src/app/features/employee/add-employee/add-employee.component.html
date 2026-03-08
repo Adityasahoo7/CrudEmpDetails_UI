@@ -1,3 +1,5 @@
+<form (ngSubmit)="save()">
+
 <div class="employee-wrapper">
 
   <div class="employee-card">
@@ -8,49 +10,51 @@
 
       <div class="form-group">
         <label>Name</label>
-        <input type="text" [(ngModel)]="employee.name" placeholder="Enter full name">
+        <input type="text" name="name" [(ngModel)]="employee.name">
       </div>
 
       <div class="form-group">
         <label>Salary</label>
-        <input type="number" [(ngModel)]="employee.salary" placeholder="Enter salary">
+        <input type="number" name="salary" [(ngModel)]="employee.salary">
       </div>
 
       <div class="form-group">
         <label>Phone</label>
-        <input type="text" [(ngModel)]="employee.phone" placeholder="Enter phone number">
+        <input type="text" name="phone" [(ngModel)]="employee.phone">
       </div>
 
       <div class="form-group">
         <label>Email</label>
-        <input type="email" [(ngModel)]="employee.email" placeholder="Enter email address">
+        <input type="email" name="email" [(ngModel)]="employee.email">
       </div>
 
       <div class="form-group">
         <label>Age</label>
-        <input type="number" [(ngModel)]="employee.age" placeholder="Enter age">
+        <input type="number" name="age" [(ngModel)]="employee.age">
       </div>
 
       <div class="form-group">
         <label>Department</label>
-        <input type="text" [(ngModel)]="employee.department" placeholder="Enter department">
+        <input type="text" name="department" [(ngModel)]="employee.department">
       </div>
 
-       <div class="form-group">
+      <div class="form-group">
         <label>Joining Date</label>
-        <input type="text" [(ngModel)]="employee.joiningDate" placeholder="Enter DOJ(YYYY-MM-DD)">
+        <input type="date" name="joiningDate" [(ngModel)]="employee.joiningDate">
       </div>
 
     </div>
 
     <div class="button-section">
-      <button class="save-btn" (click)="save()">💾 Save Employee</button>
+      <button type="submit" class="save-btn">💾 Save Employee</button>
     </div>
 
-        <div class="button-section">
-      <button class="back-btn" routerLink="/">⬅ Back</button>
+    <div class="button-section">
+      <button type="button" class="back-btn" routerLink="/dashboard">⬅ Back</button>
     </div>
 
   </div>
 
 </div>
+
+</form>

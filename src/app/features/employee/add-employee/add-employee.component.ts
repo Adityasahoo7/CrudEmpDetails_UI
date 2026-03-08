@@ -19,7 +19,7 @@ export class AddEmployeeComponent {
 
   save() {
     this.employeeService.create(this.employee).subscribe(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
     });
   }
 }

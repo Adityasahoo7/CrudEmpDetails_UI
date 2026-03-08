@@ -27,7 +27,7 @@ export class EditEmployeeComponent implements OnInit {
 
   update() {
     this.employeeService.update(this.employee.id, this.employee).subscribe(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
     });
   }
 }
