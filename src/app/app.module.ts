@@ -13,6 +13,7 @@ import { CoreModule } from './core/core.module';
 import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { SalaryPredictComponent } from './features/employee/salary-predict/salary-predict.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     EditEmployeeComponent,
     ViewEmployeeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SalaryPredictComponent
   ],
   imports: [
     BrowserModule,
