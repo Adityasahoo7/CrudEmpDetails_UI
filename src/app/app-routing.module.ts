@@ -4,6 +4,7 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { AddEmployeeComponent } from './features/employee/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './features/employee/edit-employee/edit-employee.component';
 import { ViewEmployeeComponent } from './features/employee/view-employee/view-employee.component';
+import { SalaryPredictComponent } from './features/employee/salary-predict/salary-predict.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { AuthGuard } from './core/guards/auth.guard';
@@ -27,6 +28,11 @@ const routes: Routes = [
     path: 'add-employee',
     component: AddEmployeeComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'salary-predict',
+    component: SalaryPredictComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'edit-employee/:id',
