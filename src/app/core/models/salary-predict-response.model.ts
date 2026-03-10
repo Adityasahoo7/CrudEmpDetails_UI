@@ -1,3 +1,3 @@
 export interface SalaryPredictionResponse{
-    salary:number;
+    predictedSalary:number;
 }

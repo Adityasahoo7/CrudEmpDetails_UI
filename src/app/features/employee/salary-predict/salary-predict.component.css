@@ -205,3 +205,55 @@
     box-shadow: 0 0 20px rgba(0,255,255,0.6);
   }
 }
+
+
+/* Form Container */
+.form-container {
+  margin-top: 20px;
+}
+
+/* Select Dropdown */
+.form-group select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+  font-size: 14px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(90deg,#ff7e5f,#feb47b);
+  color: black;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Predict Button */
+.predict-btn {
+  flex: 2;
+}
+
+/* Salary Value */
+.salary-value {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00f2fe;
+}

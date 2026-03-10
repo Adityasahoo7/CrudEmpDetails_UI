@@ -1,6 +1,6 @@
 export interface SalaryPredictionRequest{
 
 age:number;
-joiningDate:string;
+joiningDate:Date;
 department:string;
 }

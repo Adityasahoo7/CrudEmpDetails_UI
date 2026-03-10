@@ -61,6 +61,10 @@ logout() {
     this.router.navigate(['/add-employee']);
   }
 
+  navigateToPredict(){
+    this.router.navigate(['/salary-predict']);
+  }
+
   navigateToEdit(id: number) {
     this.router.navigate(['/edit-employee', id]);
   }

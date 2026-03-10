@@ -11,7 +11,7 @@ export class SalaryPredictComponent {
 
   predictData: SalaryPredictionRequest = {
     age: 0,
-    joiningDate: '',
+    joiningDate: new Date(),
     department: ''
   };
 
@@ -21,17 +21,23 @@ export class SalaryPredictComponent {
 
   predict() {
 
-    this.salaryService.predictSalary(this.predictData)
-      .subscribe({
-        next: (res) => {
-          this.predictedSalary = res.salary;
-        },
-        error: (err) => {
-          console.error(err);
-          alert("Prediction Failed");
-        }
-      });
+  console.log("Predict clicked");
 
-  }
+  this.salaryService.predictSalary(this.predictData)
+    .subscribe({
+      next: (res) => {
+
+        console.log("API Response:", res);
+
+        this.predictedSalary = res.predictedSalary;
+
+      },
+      error: (err) => {
+        console.error("Prediction error", err);
+        alert("Prediction failed");
+      }
+    });
+
+}
 
 }
