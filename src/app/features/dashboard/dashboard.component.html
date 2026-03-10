@@ -2,7 +2,7 @@
 
   <div class="dashboard-card">
 
-    <!-- Top Header -->
+    <!-- Header -->
     <div class="top-bar">
       <h2 class="title">👨‍💼 Employee Management System</h2>
 
@@ -11,31 +11,40 @@
       </button>
     </div>
 
-    <!-- Search + Add Section -->
-    <div class="action-bar">
+    <!-- Search Section -->
+    <div class="search-section">
 
-      <div class="search-section">
-        <input type="text"
-               placeholder="Search employees..."
-               [(ngModel)]="searchText">
+      <input 
+        type="text"
+        placeholder="🔍 Search employees..."
+        [(ngModel)]="searchText">
 
-        <button (click)="searchEmployees()">Search</button>
-      </div>
+      <button class="search-btn" (click)="searchEmployees()">
+        Search
+      </button>
+
+    </div>
+
+
+    <!-- Action Buttons -->
+    <div class="action-buttons-bar">
 
       <button class="add-btn" (click)="navigateToAdd()">
         ➕ Add Employee
       </button>
 
-
-       <button class="add-btn" (click)="navigateToPredict()">
-        🤖 Salary Predictor
+      <button class="predict-btn" (click)="navigateToPredict()">
+        🤖 AI Salary Predictor
       </button>
 
     </div>
 
-    <!-- Table Section -->
+
+    <!-- Employee Table -->
     <div class="table-container">
+
       <table>
+
         <thead>
           <tr>
             <th>ID</th>
@@ -51,7 +60,9 @@
         </thead>
 
         <tbody>
+
           <tr *ngFor="let emp of employees">
+
             <td>{{ emp.id }}</td>
             <td>{{ emp.name }}</td>
             <td>₹ {{ emp.salary }}</td>
@@ -59,16 +70,27 @@
             <td>{{ emp.email }}</td>
             <td>{{ emp.age }}</td>
             <td>{{ emp.department }}</td>
-            <td>{{emp.joiningDate}}</td>
+            <td>{{ emp.joiningDate }}</td>
 
             <td class="action-buttons">
-              <button class="edit" (click)="navigateToEdit(emp.id)">✏</button>
-              <button class="view" (click)="navigateToView(emp.id)">👁</button>
-              <button class="delete" (click)="deleteEmployee(emp.id)">🗑</button>
+
+              <button class="edit"
+                      (click)="navigateToEdit(emp.id)">✏</button>
+
+              <button class="view"
+                      (click)="navigateToView(emp.id)">👁</button>
+
+              <button class="delete"
+                      (click)="deleteEmployee(emp.id)">🗑</button>
+
             </td>
+
           </tr>
+
         </tbody>
+
       </table>
+
     </div>
 
   </div>

@@ -175,3 +175,66 @@ tbody tr:hover {
     gap: 15px;
   }
 }
+
+/* Search Section */
+.search-section{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.search-section input{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+}
+
+.search-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  background:#4facfe;
+  color:white;
+  cursor:pointer;
+}
+
+/* Action Buttons Bar */
+.action-buttons-bar{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+/* Add Button */
+.add-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(45deg,#43e97b,#38f9d7);
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.add-btn:hover{
+  transform:scale(1.05);
+}
+
+/* AI Predictor Button */
+.predict-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(45deg,#667eea,#764ba2);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.predict-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 10px #667eea;
+}
