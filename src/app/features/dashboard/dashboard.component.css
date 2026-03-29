@@ -238,3 +238,18 @@ tbody tr:hover {
   transform:scale(1.05);
   box-shadow:0 0 10px #667eea;
 }
+.export-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.export-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff9a9e;
+}

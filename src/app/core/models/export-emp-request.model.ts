@@ -1,6 +1,6 @@
 export interface ExportEmpRequest {
-    fromDate:Date;
-    toDate:Date;
-    minSalary:number;
-    maxSalary:number;
+    fromDate:Date | null;
+    toDate:Date | null;
+    minSalary:number | null;
+    maxSalary:number | null;
 }

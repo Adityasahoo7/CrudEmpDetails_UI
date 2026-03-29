@@ -1,1 +1,114 @@
-<p>exportemp works!</p>
+<div class="report-wrapper">
+
+  <div class="report-card">
+
+    <!-- Title -->
+    <h2 class="title">📊 Employee Report Dashboard</h2>
+
+    <!-- Filters -->
+    <div class="filters">
+
+      <div class="filter-group">
+        <label>From Date</label>
+        <input type="date" [(ngModel)]="filters.fromDate">
+      </div>
+
+      <div class="filter-group">
+        <label>To Date</label>
+        <input type="date" [(ngModel)]="filters.toDate">
+      </div>
+
+      <div class="filter-group">
+        <label>Min Salary</label>
+        <input type="number" [(ngModel)]="filters.minSalary" placeholder="Min">
+      </div>
+
+      <div class="filter-group">
+        <label>Max Salary</label>
+        <input type="number" [(ngModel)]="filters.maxSalary" placeholder="Max">
+      </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="actions">
+
+      <button class="search-btn" (click)="search()">
+        🔍 Search
+      </button>
+
+      <button class="excel-btn" (click)="downloadExcel()">
+        📥 Download Excel
+      </button>
+
+    </div>
+
+    <!-- Stats Card -->
+<div class="stats-container" *ngIf="totalEmployees > 0">
+
+  <div class="stat-card">
+    <span class="stat-icon">👨‍💼</span>
+    <div>
+      <p class="stat-label">Total Employees</p>
+      <h3 class="stat-value">{{ totalEmployees }}</h3>
+    </div>
+  </div>
+
+</div>
+    <!-- Loader -->
+    <div class="loader" *ngIf="loading">
+      ⏳ Loading data...
+    </div>
+
+    <!-- Table -->
+    <div class="table-container" *ngIf="employees.length > 0">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Joining Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let emp of employees">
+
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>₹ {{ emp.salary }}</td>
+            <td>{{ emp.phone }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.age }}</td>
+            <td>{{ emp.department }}</td>
+            <td>{{ emp.joiningDate | date }}</td>
+
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    
+    <!-- No Data -->
+    <div class="no-data" *ngIf="!loading && employees.length === 0">
+      ❌ No Data Found
+    </div>
+<div class="back-wrapper">
+  <button class="back-btn" routerLink="/dashboard">⬅ Back</button>
+</div>
+
+
+  </div>
+
+
+
+</div>

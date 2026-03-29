@@ -1,0 +1,192 @@
+
+/* Background */
+.report-wrapper {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.report-card {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Filters */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.filter-group input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4e73df;
+  color: white;
+  cursor: pointer;
+}
+
+.excel-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #1cc88a;
+  color: white;
+  cursor: pointer;
+}
+
+/* Loader */
+.loader {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #343a40;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f9fc;
+}
+
+tbody tr:hover {
+  background: #e2e6f5;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  font-weight: 500;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect */
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Click Effect */
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+/* Stats Section */
+.stats-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.back-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-section {
+  display: flex;
+  justify-content: center;
+}
+/* Card */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(45deg, #1cc88a, #36b9cc);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+/* Icon */
+.stat-icon {
+  font-size: 28px;
+}
+
+/* Text */
+.stat-label {
+  font-size: 13px;
+  margin: 0;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
