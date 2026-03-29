@@ -64,6 +64,9 @@ logout() {
   navigateToPredict(){
     this.router.navigate(['/salary-predict']);
   }
+  navigateToExport(){
+    this.router.navigate(['/export-employee'])
+  }
 
   navigateToEdit(id: number) {
     this.router.navigate(['/edit-employee', id]);

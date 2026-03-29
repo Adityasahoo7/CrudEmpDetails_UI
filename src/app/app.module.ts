@@ -14,6 +14,7 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { SalaryPredictComponent } from './features/employee/salary-predict/salary-predict.component';
+import { ExportempComponent } from './features/employee/exportemp/exportemp.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SalaryPredictComponent } from './features/employee/salary-predict/salar
     ViewEmployeeComponent,
     LoginComponent,
     RegisterComponent,
-    SalaryPredictComponent
+    SalaryPredictComponent,
+    ExportempComponent
   ],
   imports: [
     BrowserModule,

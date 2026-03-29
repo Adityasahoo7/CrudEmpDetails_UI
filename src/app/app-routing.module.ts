@@ -8,6 +8,7 @@ import { SalaryPredictComponent } from './features/employee/salary-predict/salar
 import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { ExportempComponent } from './features/employee/exportemp/exportemp.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'salary-predict',
     component: SalaryPredictComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'export-employee',
+    component: ExportempComponent,
     canActivate:[AuthGuard]
   },
   {
