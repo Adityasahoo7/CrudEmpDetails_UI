@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private baseUrl = 'http://localhost:5169/api/Auth';
- 
+  //private baseUrl = 'http://localhost:5169/api/Auth';
+private baseUrl = 'https://empdt-api-a9b0c8hjgzh4brfg.indiasouthcentral-01.azurewebsites.net/api/Auth';
 
   constructor(private http: HttpClient) {}
 
