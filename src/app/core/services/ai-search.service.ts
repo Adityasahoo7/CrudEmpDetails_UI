@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AiSearchService {
-private baseUrl='http://localhost:5169/api/ai-search';
+//private baseUrl='http://localhost:5169/api/ai-search';
+
+private baseUrl='https://empdt-api-a9b0c8hjgzh4brfg.indiasouthcentral-01.azurewebsites.net/api/ai-search';
   constructor(private http:HttpClient) { }
 
 
