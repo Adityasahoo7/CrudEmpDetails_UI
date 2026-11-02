@@ -9,7 +9,9 @@ import { SalaryPredictionResponse } from '../models/salary-predict-response.mode
 })
 export class SalaryPredictService {
 
-  private baseUrl='http://localhost:5169/api/SalaryPrediction';
+  private baseUrl='https://empdt-api-a9b0c8hjgzh4brfg.indiasouthcentral-01.azurewebsites.net/api/SalaryPrediction';
+  //private baseUrl='http://localhost:5169/api/SalaryPrediction';
+  
   constructor(private http:HttpClient) { }
 
   predictSalary(data: SalaryPredictionRequest):Observable<SalaryPredictionResponse>{
